@@ -35,5 +35,9 @@ for stateCount in range(0, 35):
 def index():
     return render_template("index.html", indiaTotal = indiaTotal, stateData = stateData)
 
+@app.route('/assessment')
+def assessment():
+    return render_template("assessment.html")
+
 if __name__ == '__main__':
     app.run(debug = True)
