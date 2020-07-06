@@ -1,4 +1,4 @@
-<html>
+<html lang="">
  <head>
      <style>
          * {
@@ -49,7 +49,7 @@ const url = 'https://pomber.github.io/covid19/timeseries.json'
 
 //get request using jquery
 $.get(url,{}, function(data, status){
-  if(status == 'success'){
+  if(status === 'success'){
     //Define the country name for which we need to plot the data.
     let countryRequired = 'India';
     //Defining all the variables to hold data
@@ -67,7 +67,7 @@ $.get(url,{}, function(data, status){
         confirmed+= countryData.confirmed;
         deaths+= countryData.deaths;
         recovered+= countryData.recovered;
-        if(prop == countryRequired){
+        if(prop === countryRequired){
           confirmedCountryRequired+= countryData.confirmed;
           deathsCountryRequired+= countryData.deaths;
           recoveredCountryRequired+= countryData.recovered;
@@ -89,13 +89,35 @@ $.get(url,{}, function(data, status){
 
     //Declaring 2 arrays and pushing required country's confirmed case and date data into them.
     var x=[],y=[];
+    var feb = 0,mar = 0,april = 0,may = 0, june = 0,july = 0;
     requiredCountryData.forEach(item => {
       y.push(item.confirmed);
+      console.log(item.date[5])
+      switch (item.date[5]) {
+        case '2':feb+=item.confirmed;
+        break;
+        case '3':mar+=item.confirmed;
+        break;
+        case '4':april+=item.confirmed;
+        break;
+        case '5':may+=item.confirmed;
+        break;
+        case '6':june+=item.confirmed;
+        break;
+        case '7':july+=item.confirmed;
+        break;
+      }
       x.push(item.date);
-    })
-
+    });
     //Defining the layout and title, xaxis and yaxis values of the graph
-    var layout = {
+      document.getElementById('feb').innerHTML = feb;
+      document.getElementById('mar').innerHTML = mar;
+      document.getElementById('apr').innerHTML = april;
+      document.getElementById('may').innerHTML = may;
+      document.getElementById('jun').innerHTML = june;
+      document.getElementById('jul').innerHTML = july;
+
+      var layout = {
         title: 'No. of cases per day COVID-19 in '+countryRequired,
         xaxis: {
           title: 'Days',
@@ -109,13 +131,13 @@ $.get(url,{}, function(data, status){
       };
 
       //Building object for confirmed cases using x and y arrays we made above.
-      var confirmedCases = {
-        x,
-        y,
-        type: 'scatter'
+      let confirmedCases = {
+          x,
+          y,
+          type: 'scatter'
       };
 
-      var plotData = [confirmedCases];
+      let plotData = [confirmedCases];
 
       //Using Plotly(js library) plot the graph with the layout and plotData in html element with id plot_india
       Plotly.newPlot('plot_india', plotData, layout);
@@ -134,10 +156,10 @@ $.get(url,{}, function(data, status){
               <li class="nav-item" style="padding-left:10px;">
                   <a class="nav-link" href="/assessment">Assess Yourself</a>
               </li>
-              <li class="nav-item" style="padding: left 10px;">
+              <li class="nav-item" style="padding-left: 10px;">
                   <a class="nav-link" href="/symptoms">Symptoms</a>
               </li>
-              <li class="nav-item" style="padding: left 10px;">
+              <li class="nav-item" style="padding-left: 10px;">
                   <a class="nav-link" href="/statesdaily" >Symptoms</a>
               </li>
               <li class="nav-item" style="padding-left:10px;">
@@ -178,8 +200,41 @@ $.get(url,{}, function(data, status){
    <span id="recovered_required_country"></span>
    <br>
   </div>
-  <!-- Div for the plot  -->
   <div id="plot_india">
   </div>
+  <br>
+ <table>
+     <tr>
+         <td>Feb</td>
+        <td id = "feb">
+        </td>
+     </tr>
+
+     <tr>
+         <td>mar</td>
+         <td id = "mar">
+         </td>
+     </tr>
+     <tr>
+         <td>apr</td>
+         <td id = "apr">
+         </td>
+     </tr>
+     <tr>
+         <td>may</td>
+         <td id = "may">
+         </td>
+     </tr>
+     <tr>
+         <td>June</td>
+         <td id = "jun">
+         </td>
+     </tr>
+     <tr>
+         <td>July*</td>
+         <td id = "jul">
+         </td>
+     </tr>
+ </table>
  </body>
 </html>

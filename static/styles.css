@@ -22,3 +22,7 @@ footer{
     background-color: black ;
     text-align: center ;
 }
+
+body {
+    font-family: courier, serif;
+}
