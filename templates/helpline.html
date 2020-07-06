@@ -1,0 +1,425 @@
+<<<<<<< HEAD
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Covid Tracker</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Home</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+    <!-- Bootstrap core CSS -->
+    <link href="/docs/4.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+        crossorigin="anonymous">
+    <link rel="icon" type="image/png" href="../static/covid.png">
+    
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Create a column layout with Flexbox */
+.row {
+  display: flex;
+  padding-left:20px;
+}
+
+/* Left column (menu) */
+.left {
+  flex: 35%;
+  padding: 15px 0;
+}
+
+.left h2 {
+  padding-left: 8px;
+}
+
+/* Right column (page content) */
+.right {
+  flex: 65%;
+  padding: 15px;
+}
+
+/* Style the search box */
+#mySearch {
+  width: 100%;
+  font-size: 18px;
+  padding: 11px;
+  border: 1px solid #6CFFE9;
+}
+
+/* Style the navigation menu inside the left column */
+#myMenu {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myMenu li a {
+  padding: 12px;
+  text-decoration: none;
+  color: WHITE;
+  display: block
+}
+
+#myMenu li a:hover {
+  background-color: #E8644F;
+   text-decoration: none;
+  color: BLACK;
+}
+footer{
+    padding: 0.5px;
+    margin-top: 40px;
+    color: white ;
+    background-color: black ;
+    text-align: center ;
+}
+</style>
+</head>
+<body style="font-family: aakar,serif"><nav class="navbar navbar-expand-lg navbar-light bg-info">
+    <h4>ITA COVID-Tracker</h4>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item" style="padding-left:400px;">
+                <a class="nav-link" href="/">Home</a>
+            </li>
+            <li class="nav-item" style="padding-left:10px;">
+                <a class="nav-link" href="/assessment">Assess Yourself</a>
+            </li>
+            <li class="nav-item" style="padding: left 10px;">
+                <a class="nav-link" href="/symptoms">Symptoms</a>
+            </li>
+            <li class="nav-item" style="padding: left 10px;">
+                <a class="nav-link" href="/statsdaily" >Daily Stats</a>
+            </li>
+            <li class="nav-item" style="padding-left:10px;">
+                <a class="nav-link" href="/about">Learn More</a>
+            </li>
+            <li class="nav-item" style="padding: left 10px;">
+                <a class="nav-link active" href="/helpline" >Helpline</a>
+            </li>
+	    </ul>
+    </div>
+</nav>
+
+<br>
+<h3><center>Helpline Numbers</center></h3>
+<br>
+<div class="row">
+  <div class="left" style="background-color:#000;">
+    <input type="text" id="mySearch" onkeyup="myFunction()" placeholder="Search.." title="Type in a category">
+    <ul id="myMenu">
+      
+	 <li><a href="#">  Andhra Pradesh - 0866-2410978</a></li>
+ <li><a href="#"> Arunachal Pradesh - 9436055743</a></li>
+ <li><a href="#"> Assam - 6913347770</a></li>
+ <li><a href="#"> Bihar - 104</a></li>
+ <li><a href="#"> Chhattisgarh - 104</a></li>
+ <li><a href="#"> Goa - 104</a></li>
+ <li><a href="#"> Gujarat - 104</a></li>
+ <li><a href="#"> Haryana - 8558893911</a></li>
+ <li><a href="#"> Himachal Pradesh - 104</a></li>
+ <li><a href="#"> Jharkhand - 104</a></li>
+ <li><a href="#"> Karnataka - 104</a></li>
+ <li><a href="#"> Kerala - 0471-2552056</a></li>
+ <li><a href="#"> Madhya Pradesh - 104</a></li>
+ <li><a href="#"> Maharashtra - 020-26127394</a></li>
+ <li><a href="#"> Manipur - 3852411668</a></li>
+ <li><a href="#"> Meghalaya - 108</a></li>
+ <li><a href="#"> Mizoram - 102</a></li>
+ <li><a href="#"> Nagaland - 7005539653</a></li>
+ <li><a href="#"> Odisha - 9439994859</a></li>
+ <li><a href="#"> Punjab - 104</a></li>
+ <li><a href="#"> Rajasthan - 0141-2225624</a></li>
+ <li><a href="#"> Sikkim - 104</a></li>
+ <li><a href="#"> Tamil Nadu - 044-29510500</a></li>
+ <li><a href="#"> Telangana - 104</a></li>
+ <li><a href="#"> Tripura - 0381-2315879</a></li>
+ <li><a href="#"> Uttarakhand - 104</a></li>
+ <li><a href="#"> Uttar Pradesh - 18001805145</a></li>
+ <li><a href="#"> West Bengal - 1800313444222, 03323412600</a></li>
+ 
+<li><a href="#"> Andaman and Nicobar Islands - 03192-232102</a></li>
+<li><a href="#"> Chandigarh - 9779558282</a></li>
+<li><a href="#"> Dadra and Nagar Haveli and Daman & Diu - 104</a></li>
+<li><a href="#"> Delhi - 011-22307145</a></li>
+<li><a href="#"> Jammu & Kashmir - 01912520982, 0194-2440283</a></li>
+<li><a href="#"> Ladakh - 01982256462</a></li>
+<li><a href="#"> Lakshadweep - 104</a></li>
+<li><a href="#"> Puducherry - 104</a></li>
+    </ul>
+  </div>
+  
+  <div class="right" style="background-color:#CEC1FF">
+    <p>Coronavirus outbreak has severely affected the lives of people worldwide with the national and state borders shut and lockdown imposed across the country. The COVID-19 lockdown in India 
+	resulted into a sense of uncertainty and panic among the people. Considering this, the Central Government
+	as well as all the state governments have launched COVID-19 dedicated helpline numbers to help people safeguard themselves against the highly infectious virus. Prime Minister 
+	Narendra Modi too shared a Whatsapp Helpdesk Number 9013151515 for the ease of public.</p>
+	<p>These central and state helpline numbers and email IDs provide citizens with the right and authentic information on the Coronavirus. The information is provided on the basis of advisory issued
+	by the governments and health agencies including the World Health Organisation (WHO).</p>
+	<p>Let's have a look at the Coronavirus helpline number and email IDs for India as well as for all states:</p>
+	<br>
+	<h2>Coronavirus Helpline Number for India:</h2>
+	<br>
+	<p>Central Helpline Number: +91-11-23978046</p>
+	<p>Toll-free number: 1075</p>
+    <p>Email ID : ncov2019@gov.in and ncov2019@gmail.com</p>
+    <p>Whatsapp Helpdesk Number: 9013151515</p>
+	<br>
+	<br>
+	<p>The Government is taking every possible step to contain the spread of novel Coronavirus such as Janta Curfew, country-wide lockdown, sealing of hotspots and others. All the
+	schools, colleges and offices, except essential services, are closed.
+
+</p>
+   </div>
+</div>
+
+<script>
+function myFunction() {
+  var input, filter, ul, li, a, i;
+  input = document.getElementById("mySearch");
+  filter = input.value.toUpperCase();
+  ul = document.getElementById("myMenu");
+  li = ul.getElementsByTagName("li");
+  for (i = 0; i < li.length; i++) {
+    a = li[i].getElementsByTagName("a")[0];
+    if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+      li[i].style.display = "";
+    } else {
+      li[i].style.display = "none";
+    }
+  }
+}
+</script>
+		<br>
+        <footer>
+            <p>Copyrights &copy; CovidTracker</p>
+        </footer>
+        <br>
+  
+</body>
+</html>
+=======
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Covid Tracker</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Home</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+    <!-- Bootstrap core CSS -->
+    <link href="/docs/4.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+        crossorigin="anonymous">
+
+    
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Create a column layout with Flexbox */
+.row {
+  display: flex;
+  padding-left:20px;
+}
+
+/* Left column (menu) */
+.left {
+  flex: 35%;
+  padding: 15px 0;
+}
+
+.left h2 {
+  padding-left: 8px;
+}
+
+/* Right column (page content) */
+.right {
+  flex: 65%;
+  padding: 15px;
+}
+
+/* Style the search box */
+#mySearch {
+  width: 100%;
+  font-size: 18px;
+  padding: 11px;
+  border: 1px solid #6CFFE9;
+}
+
+/* Style the navigation menu inside the left column */
+#myMenu {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myMenu li a {
+  padding: 12px;
+  text-decoration: none;
+  color: WHITE;
+  display: block
+}
+
+#myMenu li a:hover {
+  background-color: #E8644F;
+   text-decoration: none;
+  color: BLACK;
+}
+footer{
+    padding: 0.5px;
+    margin-top: 40px;
+    color: white ;
+    background-color: black ;
+    text-align: center ;
+}
+</style>
+</head>
+<body style="font-family: aakar,serif"><nav class="navbar navbar-expand-lg navbar-light bg-info">
+    <h4>ITA COVID-Tracker</h4>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item" style="padding-left:500px;">
+                    <a class="nav-link active" href="http://127.0.0.1:5000/">Home</a>
+                </li>
+                <li class="nav-item" style="padding-left:10px;">
+                    <a class="nav-link" href="assessment.html">Assess Yourself</a>
+                </li>
+                <li class="nav-item" style="padding-left: 10px;">
+                    <a class="nav-link" href="symptoms.html">Symptoms</a>
+                </li>
+                <li class="nav-item" style="padding-left: 10px;">
+                    <a class="nav-link" href="dailyStats.html" >Daily Stats</a>
+                </li>
+                <li class="nav-item" style="padding-left:10px;">
+                    <a class="nav-link" href="about.html">Learn More</a>
+                </li>
+                 <li class="nav-item" style="padding-left:10px;">
+                    <a class="nav-link" href="helpline.html">Helpline</a>
+                </li>
+	    </ul>
+    </div>
+</nav>
+
+<br>
+<h3><center>Helpline Numbers</center></h3>
+<br>
+<div class="row">
+  <div class="left" style="background-color:#000;">
+    <input type="text" id="mySearch" onkeyup="myFunction()" placeholder="Search.." title="Type in a category">
+    <ul id="myMenu">
+      
+	 <li><a href="#">  Andhra Pradesh - 0866-2410978</a></li>
+ <li><a href="#"> Arunachal Pradesh - 9436055743</a></li>
+ <li><a href="#"> Assam - 6913347770</a></li>
+ <li><a href="#"> Bihar - 104</a></li>
+ <li><a href="#"> Chhattisgarh - 104</a></li>
+ <li><a href="#"> Goa - 104</a></li>
+ <li><a href="#"> Gujarat - 104</a></li>
+ <li><a href="#"> Haryana - 8558893911</a></li>
+ <li><a href="#"> Himachal Pradesh - 104</a></li>
+ <li><a href="#"> Jharkhand - 104</a></li>
+ <li><a href="#"> Karnataka - 104</a></li>
+ <li><a href="#"> Kerala - 0471-2552056</a></li>
+ <li><a href="#"> Madhya Pradesh - 104</a></li>
+ <li><a href="#"> Maharashtra - 020-26127394</a></li>
+ <li><a href="#"> Manipur - 3852411668</a></li>
+ <li><a href="#"> Meghalaya - 108</a></li>
+ <li><a href="#"> Mizoram - 102</a></li>
+ <li><a href="#"> Nagaland - 7005539653</a></li>
+ <li><a href="#"> Odisha - 9439994859</a></li>
+ <li><a href="#"> Punjab - 104</a></li>
+ <li><a href="#"> Rajasthan - 0141-2225624</a></li>
+ <li><a href="#"> Sikkim - 104</a></li>
+ <li><a href="#"> Tamil Nadu - 044-29510500</a></li>
+ <li><a href="#"> Telangana - 104</a></li>
+ <li><a href="#"> Tripura - 0381-2315879</a></li>
+ <li><a href="#"> Uttarakhand - 104</a></li>
+ <li><a href="#"> Uttar Pradesh - 18001805145</a></li>
+ <li><a href="#"> West Bengal - 1800313444222, 03323412600</a></li>
+ 
+<li><a href="#"> Andaman and Nicobar Islands - 03192-232102</a></li>
+<li><a href="#"> Chandigarh - 9779558282</a></li>
+<li><a href="#"> Dadra and Nagar Haveli and Daman & Diu - 104</a></li>
+<li><a href="#"> Delhi - 011-22307145</a></li>
+<li><a href="#"> Jammu & Kashmir - 01912520982, 0194-2440283</a></li>
+<li><a href="#"> Ladakh - 01982256462</a></li>
+<li><a href="#"> Lakshadweep - 104</a></li>
+<li><a href="#"> Puducherry - 104</a></li>
+    </ul>
+  </div>
+  
+  <div class="right" style="background-color:#CEC1FF">
+    <p>Coronavirus outbreak has severely affected the lives of people worldwide with the national and state borders shut and lockdown imposed across the country. The COVID-19 lockdown in India 
+	resulted into a sense of uncertainty and panic among the people. Considering this, the Central Government
+	as well as all the state governments have launched COVID-19 dedicated helpline numbers to help people safeguard themselves against the highly infectious virus. Prime Minister 
+	Narendra Modi too shared a Whatsapp Helpdesk Number 9013151515 for the ease of public.</p>
+	<p>These central and state helpline numbers and email IDs provide citizens with the right and authentic information on the Coronavirus. The information is provided on the basis of advisory issued
+	by the governments and health agencies including the World Health Organisation (WHO).</p>
+	<p>Let's have a look at the Coronavirus helpline number and email IDs for India as well as for all states:</p>
+	<br>
+	<h2>Coronavirus Helpline Number for India:</h2>
+	<br>
+	<p>Central Helpline Number: +91-11-23978046</p>
+	<p>Toll-free number: 1075</p>
+    <p>Email ID : ncov2019@gov.in and ncov2019@gmail.com</p>
+    <p>Whatsapp Helpdesk Number: 9013151515</p>
+	<br>
+	<br>
+	<p>The Government is taking every possible step to contain the spread of novel Coronavirus such as Janta Curfew, country-wide lockdown, sealing of hotspots and others. All the
+	schools, colleges and offices, except essential services, are closed.
+
+</p>
+   </div>
+</div>
+
+<script>
+function myFunction() {
+  var input, filter, ul, li, a, i;
+  input = document.getElementById("mySearch");
+  filter = input.value.toUpperCase();
+  ul = document.getElementById("myMenu");
+  li = ul.getElementsByTagName("li");
+  for (i = 0; i < li.length; i++) {
+    a = li[i].getElementsByTagName("a")[0];
+    if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+      li[i].style.display = "";
+    } else {
+      li[i].style.display = "none";
+    }
+  }
+}
+</script>
+		<br>
+        <footer>
+            <p>Copyrights &copy; CovidTracker</p>
+        </footer>
+        <br>
+  
+</body>
+</html>
+>>>>>>> d104f1cb52f03e111ede1624aff62d5092c1f4b2

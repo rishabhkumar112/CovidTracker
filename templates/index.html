@@ -1,0 +1,137 @@
+<html>
+    <head>
+        <title>Covid Tracker</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Home</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+    <!-- Bootstrap core CSS -->
+    <link href="/docs/4.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+        crossorigin="anonymous">
+    <!-- Angular -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+<<<<<<< HEAD
+    <link rel = "stylesheet" href = "../static/styles.css">
+    <link rel="icon" type="image/png" href="../static/covid.png">
+=======
+    <link href="../static/styles.css" rel="stylesheet">
+>>>>>>> d104f1cb52f03e111ede1624aff62d5092c1f4b2
+    </head>
+    <body style="font-family: aakar,serif"><nav class="navbar navbar-expand-lg navbar-light bg-info">
+        <h4>ITA COVID-Tracker</h4>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+<<<<<<< HEAD
+                <li class="nav-item" style="padding-left:400px;">
+                    <a class="nav-link active" href="/">Home</a>
+=======
+                <li class="nav-item" style="padding-left:500px;">
+                    <a class="nav-link active" href="http://127.0.0.1:5000/">Home</a>
+>>>>>>> d104f1cb52f03e111ede1624aff62d5092c1f4b2
+                </li>
+                <li class="nav-item" style="padding-left:10px;">
+                    <a class="nav-link" href="assessment.html">Assess Yourself</a>
+                </li>
+                <li class="nav-item" style="padding-left: 10px;">
+                    <a class="nav-link" href="symptoms.html">Symptoms</a>
+                </li>
+                <li class="nav-item" style="padding-left: 10px;">
+                    <a class="nav-link" href="dailyStats.html" >Daily Stats</a>
+                </li>
+                <li class="nav-item" style="padding-left:10px;">
+                    <a class="nav-link" href="about.html">Learn More</a>
+                </li>
+<<<<<<< HEAD
+                <li class="nav-item" style="padding: left 10px;">
+                    <a class="nav-link" href="/helpline" >Helpline</a>
+                </li>
+=======
+                 <li class="nav-item" style="padding-left:10px;">
+                    <a class="nav-link" href="helpline.html">Helpline</a>
+                </li>
+               
+>>>>>>> d104f1cb52f03e111ede1624aff62d5092c1f4b2
+            </ul>
+        </div>
+    </nav>
+        <h3 style = "margin-left: 45%"><b>India Stats<b></h3>
+        <div style = "margin-left: 25%;" class="card-columns">
+            <div class="card bg-light">
+              <div class="card-body text-center">
+                <p class="card-text">Total Cases : <b>{{indiaTotal.total}}</b></p>
+              </div>
+            </div>
+            <div class="card bg-success">
+              <div class="card-body text-center">
+                <p class="card-text">Recovered: <b>{{indiaTotal.recovered}}</b></p>
+              </div>
+            </div>
+            <div class="card bg-danger">
+              <div class="card-body text-center">
+                <p class="card-text">Death: <b>{{indiaTotal.death}}</b></p>
+              </div>
+            </div>
+            <div class="card bg-primary">
+              <div class="card-body text-center">
+                <p class="card-text">Active: <b>{{indiaTotal.active}}</b></p>
+              </div>
+            </div>
+        </div>
+        <h3 style = "margin-left: 42%"><b>State Wise Statistics</b></h3> <br>
+
+        <input type = "text" style = "margin-left: 70%; margin-bottom: 10px; width:300px; height:50px;" id = "stateName" onkeyup = "searchFunction()"  placeholder = "Search for state ..."/>
+        <table id = "stateTable">
+            <tr style = "font-size: large">
+                <th>State</th>
+                <th>Total Cases</th>
+                <th>Recovered</th>
+                <th>Active</th>
+                <th>Death</th>
+            </tr>
+            {% for data in stateData %}
+                <tr>
+                    <td>{{data[0]}}</td>
+                    <td><b>{{data[1]}}<b></td>
+                    <td style = "color: green">{{data[2]}}</td>
+                    <td style = "color: blue">{{data[3]}}</td>
+                    <td style = "color: red;">{{data[4]}}</td>
+                </tr>
+            {% endfor %}
+        </table>
+        </div>
+        <center><footer>
+            <p>Copyrights &copy; CovidTracker</p>
+        </footer></center>
+        <br>
+    </body>
+    <script>
+        function searchFunction() {
+            var input, filter, table, tr, td, i, txtValue;
+            input = document.getElementById("stateName");
+            filter = input.value.toLowerCase();
+            table = document.getElementById("stateTable");
+            tr = table.getElementsByTagName("tr");
+            for(i = 0; i < tr.length; i++) {
+                // first column for state name
+                td = tr[i].getElementsByTagName("td")[0];
+                if(td) {
+                    txtValue = td.textContent || td.innerText;
+                    // indexof(filter) return first index of substring found
+                    if(txtValue.toLocaleLowerCase().indexOf(filter) > -1) {
+                        tr[i].style.display = "";
+                    } else {
+                        tr[i].style.display = "none";
+                    }
+                }
+            }
+        }
+    </script>
+</html>
