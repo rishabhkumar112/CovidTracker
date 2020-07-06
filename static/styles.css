@@ -15,3 +15,10 @@ tr:nth-child(even) {
 p.card-text {
     font-weight: bold;
 }
+footer{
+    padding: 0.5px;
+    margin-top: 40px;
+    color: white ;
+    background-color: black ;
+    text-align: center ;
+}
