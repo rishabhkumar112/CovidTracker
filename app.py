@@ -51,9 +51,9 @@ def helpline():
 def about():
     return render_template("about.html")
 
-@app.route('/statesdaily')
+@app.route('/statsdaily')
 def statesdaily():
-    return render_template("Symptoms.html")
+    return render_template("dailyStats.html")
 
 if __name__ == '__main__':
     app.run(debug = True)
