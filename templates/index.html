@@ -50,42 +50,25 @@
             </div>
         </nav>
 
-<<<<<<< HEAD
         <h3 style = "margin-left: 45%"><b>India Stats<b></h3>
         <div style = "margin-left: 25%;" class="card-columns">
             <div class="card bg-light">
               <div class="card-body text-center">
                 <p class="card-text">Total Cases : <b>{{indiaTotal.total}}</b></p>
-=======
-        <h3 style = "margin-left: 45%">India Stats</h3>
-        <div style = "margin-left: 25%;" class="card-columns">
-            <div class="card bg-light">
-              <div class="card-body text-center">
-                <p class="card-text">Total Cases :{{indiaTotal.total}}</p>
->>>>>>> 04b89520343445d0af1f9ea06d1a5c82bba2e81d
               </div>
             </div>
             <div class="card bg-success">
               <div class="card-body text-center">
-<<<<<<< HEAD
                 <p class="card-text">Recovered: <b>{{indiaTotal.recovered}}</b></p>
-=======
-                <p class="card-text">Recovered: {{indiaTotal.recovered}}</p>
->>>>>>> 04b89520343445d0af1f9ea06d1a5c82bba2e81d
               </div>
             </div>
             <div class="card bg-danger">
               <div class="card-body text-center">
-<<<<<<< HEAD
                 <p class="card-text">Death: <b>{{indiaTotal.death}}</b></p>
-=======
-                <p class="card-text">Death: {{indiaTotal.death}}</p>
->>>>>>> 04b89520343445d0af1f9ea06d1a5c82bba2e81d
               </div>
             </div>
             <div class="card bg-primary">
               <div class="card-body text-center">
-<<<<<<< HEAD
                 <p class="card-text">Active: <b>{{indiaTotal.active}}</b></p>
               </div>
             </div>
@@ -95,15 +78,6 @@
         <input type = "text" style = "margin-left: 70%; margin-bottom: 10px; width:300px; height:50px;" id = "stateName" onkeyup = "searchFunction()"  placeholder = "Search for state ..."/>
         <table id = "stateTable">
             <tr style = "font-size: large">
-=======
-                <p class="card-text">Active: {{indiaTotal.active}}</p>
-              </div>
-            </div>
-        </div>
-        <h3 style = "margin-left: 42%">State Wise Statistics</h3>
-        <table>
-            <tr>
->>>>>>> 04b89520343445d0af1f9ea06d1a5c82bba2e81d
                 <th>State</th>
                 <th>Total Cases</th>
                 <th>Recovered</th>
@@ -113,7 +87,6 @@
             {% for data in stateData %}
                 <tr>
                     <td>{{data[0]}}</td>
-<<<<<<< HEAD
                     <td><b>{{data[1]}}<b></td>
                     <td style = "color: green">{{data[2]}}</td>
                     <td style = "color: blue">{{data[3]}}</td>
@@ -145,14 +118,4 @@
             }
         }
     </script>
-=======
-                    <td>{{data[1]}}</td>
-                    <td>{{data[2]}}</td>
-                    <td>{{data[3]}}</td>
-                    <td>{{data[4]}}</td>
-                </tr>
-            {% endfor %}
-        </table>
-    </body>
->>>>>>> 04b89520343445d0af1f9ea06d1a5c82bba2e81d
 </html>

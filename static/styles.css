@@ -2,10 +2,7 @@ table {
     font-family: arial, sans-serif;
     border-collapse: collapse;
     width: 100%;
-<<<<<<< HEAD
     margin-top: 20px;
-=======
->>>>>>> 04b89520343445d0af1f9ea06d1a5c82bba2e81d
 }
 td, th {
     border: 1px solid #dddddd;
@@ -14,10 +11,7 @@ td, th {
 }
 tr:nth-child(even) {
     background-color: #dddddd;
-<<<<<<< HEAD
 }
 p.card-text {
     font-weight: bold;
-=======
->>>>>>> 04b89520343445d0af1f9ea06d1a5c82bba2e81d
 }
