@@ -25,7 +25,7 @@ for stateCount in range(0, 35):
         covidData['data']['regional'][stateCount]['totalConfirmed'],
         covidData['data']['regional'][stateCount]['discharged'],
         covidData['data']['regional'][stateCount]['totalConfirmed'] - (covidData['data']['regional'][stateCount]['discharged'] + covidData['data']['regional'][stateCount]['deaths']),
-        covidData['data']['regional'][stateCount]['deaths'],
+        covidData['data']['regional'][stateCount]['deaths'],  
     ])
 
 #print(indiaTotal)
@@ -38,6 +38,18 @@ def index():
 @app.route('/assessment')
 def assessment():
     return render_template("assessment.html")
+
+@app.route('/symptoms')
+def symptoms():
+    return render_template("symptoms.html")
+
+@app.route('/helpline')
+def helpline():
+    return render_template("helpline.html")
+
+@app.route('/about')
+def about():
+    return render_template("about.html")
 
 @app.route('/statesdaily')
 def statesdaily():
