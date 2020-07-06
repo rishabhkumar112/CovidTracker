@@ -39,5 +39,17 @@ def index():
 def assessment():
     return render_template("assessment.html")
 
+@app.route('/symptoms')
+def symptoms():
+    return render_template("symptoms.html")
+
+@app.route('/helpline')
+def helpline():
+    return render_template("helpline.html")
+
+@app.route('/about')
+def about():
+    return render_template("about.html")
+
 if __name__ == '__main__':
     app.run(debug = True)
